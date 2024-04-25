@@ -1,0 +1,25 @@
+﻿<Window x:Class="WizardScorer.PointsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WizardScorer"
+        mc:Ignorable="d"
+        Title="PointsWindow" Height="600" Width="800">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <StackPanel x:Name="Toolbar">
+                <Button x:Name="To_predictions" Click="To_predictions_Click">Gomb</Button>
+            </StackPanel>
+        </Grid>
+        <Grid x:Name="PointsGrid" VerticalAlignment="Center" Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+        </Grid>
+    </Grid>
+</Window>

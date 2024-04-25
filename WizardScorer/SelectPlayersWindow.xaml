@@ -1,0 +1,46 @@
+﻿<Window x:Class="WizardScorer.SelectPlayersWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WizardScorer"
+        mc:Ignorable="d"
+        Title="SelectPlayersWindow" Height="600" Width="800">
+    <Grid>
+        <Grid.Resources></Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Válaszd ki a játékosokat!" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="30" Margin="10" VerticalAlignment="Top"/>
+        <Grid x:Name="PlayersGrid" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition x:Name="InputColumn" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <ComboBox x:Name="Player1" ItemsSource="{Binding PlayerList}" DisplayMemberPath="PlayerName" Grid.Row="0" Width="200" FontSize="20" Text="Player One Prediction"></ComboBox>
+            <ComboBox x:Name="Player2" ItemsSource="{Binding PlayerList}" DisplayMemberPath="PlayerName" Grid.Row="1" Width="200" FontSize="20" Text="Player Two Prediction"></ComboBox>
+            <ComboBox x:Name="Player3" ItemsSource="{Binding PlayerList}" DisplayMemberPath="PlayerName" Grid.Row="2" Width="200" FontSize="20" Text="Player Three Prediction"></ComboBox>
+            <ComboBox x:Name="Player4" ItemsSource="{Binding PlayerList}" DisplayMemberPath="PlayerName" Grid.Row="3" Width="200" FontSize="20" Text="Player Four Prediction"></ComboBox>
+            <ComboBox x:Name="Player5" ItemsSource="{Binding PlayerList}" DisplayMemberPath="PlayerName" Grid.Row="4" Width="200" FontSize="20" Text="Player Five Prediction"></ComboBox>
+            <ComboBox x:Name="Player6" ItemsSource="{Binding PlayerList}" DisplayMemberPath="PlayerName" Grid.Row="5" Width="200" FontSize="20" Text="Player Six Prediction"></ComboBox>
+        </Grid>
+        <Button x:Name="Start" Grid.Row="2" Grid.ColumnSpan="2" Width="200" FontSize="14" Padding="20" Margin="10" Click="Start_Game" Content="Kezdés" />
+        <TextBox x:Name="New_Player_Name" Grid.Row="3" FontSize="20" Width="300" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="20" Margin="10" TextAlignment="Center" >Új játékos neve</TextBox>
+        <Button x:Name="AddPlayer" Grid.Row="3" Grid.Column="1" Width="200" FontSize="16" Padding="20" Margin="10" Click="AddPlayer_Click" Content="Új játékos hozzáadása" />
+    </Grid>
+</Window>
