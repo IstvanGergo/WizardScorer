@@ -23,7 +23,7 @@ public partial class WizardContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlite("DataSource=C:\\Users\\exaca\\source\\repos\\WizardScorer\\WizardScorer\\WizardScorer.db");
+        optionsBuilder.UseSqlite("DataSource=WizardScorer.db");
         base.OnConfiguring(optionsBuilder);
     }
 

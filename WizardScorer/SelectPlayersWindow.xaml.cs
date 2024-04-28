@@ -33,6 +33,7 @@ public partial class SelectPlayersWindow : Window
             {
                 PlayerList.Add(player);
             }
+            
             InitializeComponent();
             this.DataContext = this;
             InitializeComboBoxList();
@@ -74,6 +75,12 @@ public partial class SelectPlayersWindow : Window
             else
             {
                 NumPlayers = SelectedPlayers.Count;
+                Game currentgame = new()
+                {
+                    Date = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
+                };
+                context.Add(currentgame);
+                context.SaveChanges();
                 PredictionWindow predictionWindow = new ();
                 predictionWindow.Show();
                 this.Hide();
@@ -84,9 +91,19 @@ public partial class SelectPlayersWindow : Window
         {
             Player player = new()
             {
-                PlayerName = New_Player_Name.Text
+                PlayerName = NewPlayerName.Text
             };
-
+            if(context.Players.FromSql($"SELECT * FROM players where Player_Name={NewPlayerName.Text}").Any())
+            {
+                string errormsg = "Már szerepel az adatbázisban ilyen nevű játékos!";
+                string errorcaption = "Új játékos hiba!";
+                
+                MessageBox.Show(errormsg, errorcaption, MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            context.Add(player);
+            PlayerList.Add(player);
+            context.SaveChanges();
         }
     }
 }

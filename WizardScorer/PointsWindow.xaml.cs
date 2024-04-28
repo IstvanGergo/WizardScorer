@@ -54,14 +54,14 @@ namespace WizardScorer
                     Text = "Pont",
                     VerticalAlignment = VerticalAlignment.Center,
                     HorizontalAlignment = HorizontalAlignment.Center,
-                    Margin = new Thickness(15, 0, 15, 0)
+                    Margin = new Thickness(25, 0, 25, 0)
                 };
                 TextBlock trick = new()
                 {
                     Text = "Ütés",
                     VerticalAlignment = VerticalAlignment.Center,
                     HorizontalAlignment = HorizontalAlignment.Center,
-                    Margin = new Thickness(15, 0, 15, 0)
+                    Margin = new Thickness(25, 0, 25, 0)
                 };
 
                 Grid.SetRow(point, 1);
@@ -96,7 +96,9 @@ namespace WizardScorer
 
         private void To_predictions_Click(object sender, RoutedEventArgs e)
         {
-
+            PredictionWindow predictionWindow = new();
+            predictionWindow.Show();
+            this.Hide();
         }
     }
 }

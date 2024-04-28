@@ -40,7 +40,7 @@
             <ComboBox x:Name="Player6" ItemsSource="{Binding PlayerList}" DisplayMemberPath="PlayerName" Grid.Row="5" Width="200" FontSize="20" Text="Player Six Prediction"></ComboBox>
         </Grid>
         <Button x:Name="Start" Grid.Row="2" Grid.ColumnSpan="2" Width="200" FontSize="14" Padding="20" Margin="10" Click="Start_Game" Content="Kezdés" />
-        <TextBox x:Name="New_Player_Name" Grid.Row="3" FontSize="20" Width="300" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="20" Margin="10" TextAlignment="Center" >Új játékos neve</TextBox>
+        <TextBox x:Name="NewPlayerName" Grid.Row="3" FontSize="20" Width="300" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="20" Margin="10" TextAlignment="Center" >Új játékos neve</TextBox>
         <Button x:Name="AddPlayer" Grid.Row="3" Grid.Column="1" Width="200" FontSize="16" Padding="20" Margin="10" Click="AddPlayer_Click" Content="Új játékos hozzáadása" />
     </Grid>
 </Window>
