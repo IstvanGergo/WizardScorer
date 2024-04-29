@@ -26,7 +26,7 @@ public partial class SelectPlayersWindow : Window
         ObservableCollection<Player> PlayerList = [];
         public ObservableCollection<Player> SelectedPlayers { get; set; } = [];
         private List<ComboBox> playerComboBoxes = [];
-        WizardContext context = new();
+        public WizardContext context = new();
         public SelectPlayersWindow()
         {
             foreach(Player player in context.Players.ToList())
@@ -80,6 +80,15 @@ public partial class SelectPlayersWindow : Window
                     Date = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
                 };
                 context.Add(currentgame);
+                foreach(var player in SelectedPlayers)
+                {
+                    PlayersGame game = new()
+                    {
+                        Player = player,
+                        Game = currentgame
+                    };
+                    context.Add(game);
+                }
                 context.SaveChanges();
                 PredictionWindow predictionWindow = new ();
                 predictionWindow.Show();

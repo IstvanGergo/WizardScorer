@@ -91,9 +91,6 @@ namespace WizardScorer
                 //PointsGrid.Children.Add(border);
             }
         }
-
-
-
         private void To_predictions_Click(object sender, RoutedEventArgs e)
         {
             PredictionWindow predictionWindow = new();

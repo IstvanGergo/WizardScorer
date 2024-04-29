@@ -1,11 +1,11 @@
-﻿<Window x:Class="WizardScorer.PredictionWindow"
+﻿<Window x:Class="WizardScorer.TricksWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WizardScorer"
         mc:Ignorable="d"
-        Title="PredictionWindow" Height="600" Width="800">
+        Title="TricksWindow" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -13,7 +13,7 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <TextBlock Text="Add meg a jósolt ütéseket!" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="30" Margin="10" VerticalAlignment="Top"/>
+        <TextBlock Text="Add meg a vitt ütéseket!" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="30" Margin="10" VerticalAlignment="Top"/>
         <Grid x:Name="MainGrid" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition x:Name="labelColumn" />
@@ -34,14 +34,14 @@
             <Label x:Name="Player4Name" Grid.Row="3" FontSize="20" HorizontalAlignment="Center" ></Label>
             <Label x:Name="Player5Name" Grid.Row="4" FontSize="20" HorizontalAlignment="Center" ></Label>
             <Label x:Name="Player6Name" Grid.Row="5" FontSize="20" HorizontalAlignment="Center" ></Label>
-            <TextBox x:Name="Player1Pred" Grid.Column="1" Grid.Row="0" Width="200" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"></TextBox>
-            <TextBox x:Name="Player2Pred" Grid.Column="1" Grid.Row="1" Width="200" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"></TextBox>
-            <TextBox x:Name="Player3Pred" Grid.Column="1" Grid.Row="2" Width="200" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"></TextBox>
-            <TextBox x:Name="Player4Pred" Grid.Column="1" Grid.Row="3" Width="200" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"></TextBox>
-            <TextBox x:Name="Player5Pred" Grid.Column="1" Grid.Row="4" Width="200" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"></TextBox>
-            <TextBox x:Name="Player6Pred" Grid.Column="1" Grid.Row="5" Width="200" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"></TextBox>
+            <TextBox x:Name="Player1Trick" Grid.Column="1" Grid.Row="0" Width="200" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"></TextBox>
+            <TextBox x:Name="Player2Trick" Grid.Column="1" Grid.Row="1" Width="200" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"></TextBox>
+            <TextBox x:Name="Player3Trick" Grid.Column="1" Grid.Row="2" Width="200" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"></TextBox>
+            <TextBox x:Name="Player4Trick" Grid.Column="1" Grid.Row="3" Width="200" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"></TextBox>
+            <TextBox x:Name="Player5Trick" Grid.Column="1" Grid.Row="4" Width="200" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"></TextBox>
+            <TextBox x:Name="Player6Trick" Grid.Column="1" Grid.Row="5" Width="200" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"></TextBox>
         </Grid>
-        <Button x:Name="Start" Grid.Row="2" Width="200" FontSize="14" Padding="20" Margin="20" Click="Register_Predictions" Content="Rögzítés" />
+        <Button x:Name="Start" Grid.Row="2" Width="200" FontSize="14" Padding="20" Margin="20" Click="Register_Tíricks" Content="Rögzítés" />
         <Button x:Name="Check" Grid.Row="3"  Width="200" FontSize="14" Padding="20" Margin="20" Click="Go_To_Points" Content="Pontozólap" />
     </Grid>
 </Window>

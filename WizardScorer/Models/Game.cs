@@ -7,7 +7,7 @@ public partial class Game
 {
     public int GameId { get; set; }
 
-    public string Date { get; set; }
+    public string Date { get; set; } = null!;
 
-    public virtual ICollection<Score> Scores { get; set; } = new List<Score>();
+    public virtual ICollection<PlayersGame> PlayersGames { get; set; } = new List<PlayersGame>();
 }

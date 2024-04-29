@@ -9,5 +9,5 @@ public partial class Player
 
     public string PlayerName { get; set; } = null!;
 
-    public virtual ICollection<Score> Scores { get; set; } = new List<Score>();
+    public virtual ICollection<PlayersGame> PlayersGames { get; set; } = new List<PlayersGame>();
 }
