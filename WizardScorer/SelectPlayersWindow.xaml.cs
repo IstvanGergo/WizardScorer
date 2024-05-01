@@ -74,6 +74,7 @@ public partial class SelectPlayersWindow : Window
             }
             else
             {
+                SelectedPlayers = new ObservableCollection<Player>(SelectedPlayers.OrderBy(player => player.PlayerId));
                 NumPlayers = SelectedPlayers.Count;
                 Game currentgame = new()
                 {
@@ -111,7 +112,7 @@ public partial class SelectPlayersWindow : Window
                 return;
             }
             context.Add(player);
-            PlayerList.Add(player);
+            //PlayerList.Add(player);
             context.SaveChanges();
         }
     }

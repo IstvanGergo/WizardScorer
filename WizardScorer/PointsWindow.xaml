@@ -12,7 +12,7 @@
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <StackPanel x:Name="Toolbar">
-                <Button x:Name="To_predictions" Click="To_predictions_Click">Gomb</Button>
+                <Button x:Name="To_predictions" Width="400" Click="To_predictions_Click">Vissza a jóslatokhoz</Button>
             </StackPanel>
         </Grid>
         <Grid x:Name="PointsGrid" VerticalAlignment="Center" Margin="10">

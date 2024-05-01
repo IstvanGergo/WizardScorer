@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WizardScorer"
         mc:Ignorable="d"
-        Title="TricksWindow" Height="450" Width="800">
+        Title="TricksWindow" Height="600" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -41,7 +41,7 @@
             <TextBox x:Name="Player5Trick" Grid.Column="1" Grid.Row="4" Width="200" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"></TextBox>
             <TextBox x:Name="Player6Trick" Grid.Column="1" Grid.Row="5" Width="200" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"></TextBox>
         </Grid>
-        <Button x:Name="Start" Grid.Row="2" Width="200" FontSize="14" Padding="20" Margin="20" Click="Register_Tíricks" Content="Rögzítés" />
-        <Button x:Name="Check" Grid.Row="3"  Width="200" FontSize="14" Padding="20" Margin="20" Click="Go_To_Points" Content="Pontozólap" />
+        <Button x:Name="Start" Grid.Row="2" Width="200" FontSize="14" Padding="20" Margin="20" Click="Register_Tricks" Content="Rögzítés" />
+        <Button x:Name="Check" Grid.Row="3"  Width="200" FontSize="14" Padding="20" Margin="20" Click="Go_To_Points"  Content="Pontozólap" />
     </Grid>
 </Window>
