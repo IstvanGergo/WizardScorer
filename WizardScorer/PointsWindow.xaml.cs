@@ -38,14 +38,16 @@ namespace WizardScorer
                     CreateColumn();
                 }
                 AddPlayerToGrid(i);
-                CreateSubColumn("Pont", i * 3,1);
-                CreateSubColumn("Jóslat", i * 3 + 1,1);
+                CreateSubColumn("Pont", i * 3, 1);
+                CreateSubColumn("Jóslat", i * 3 + 1, 1);
                 CreateSubColumn("Vitt Ütés", i * 3 + 2, 1);
             }
             for (int j = 1; j <= (60 / numPlayers); j++)
             {
                 CreateNewRow(j);
             }
+            Grid.SetRow(New_round, 60 / numPlayers + 2);
+            Grid.SetColumnSpan(New_round, numPlayers * 3 + 1);
         }
         private void CreateColumn()
         {
@@ -138,6 +140,21 @@ namespace WizardScorer
         {
             PredictionWindow predictionWindow = new();
             predictionWindow.Show();
+            this.Hide();
+        }
+
+        private void To_tricks_Click(object sender, RoutedEventArgs e)
+        {
+            TricksWindow tricksWindow = new();
+            tricksWindow.Show();
+            this.Hide();
+        }
+
+        private void New_round_Click(object sender, RoutedEventArgs e)
+        {
+            PredictionWindow.Increment_round();
+            PredictionWindow predictionWindow1 = new();
+            predictionWindow1.Show();
             this.Hide();
         }
     }

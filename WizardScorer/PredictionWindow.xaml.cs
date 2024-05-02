@@ -22,17 +22,16 @@ namespace WizardScorer
         private List<Tuple<Player, TextBox>> Players = [];
         private List<Label> PlayerLabels = [];
         private List<TextBox> PredictionBoxes = [];
-        int round = 1;
+        private static int round = 1;
         public PredictionWindow()
         {
             InitializeComponent();
             WizardContext context = new();
             int currentGame = context.Games.OrderByDescending(games => games.GameId).First().GameId;
             var selected = context.Players.FromSql($"SELECT Player_Name, Players.PlayerID FROM Players INNER JOIN Players_Games ON Players.PlayerID = Players_Games.PlayerID INNER JOIN Games ON Games.GameID = Players_Games.GameID WHERE Games.GameID = {currentGame} ORDER BY Games.GameID DESC").ToList();
-            
             PredictionBoxes = [Player1Pred, Player2Pred, Player3Pred, Player4Pred, Player5Pred, Player6Pred];
             PlayerLabels = [Player1Name, Player2Name, Player3Name, Player4Name, Player5Name, Player6Name];
-
+            Actual_round.Content ="Aktuális kör: " + round ;
             for (int i = 0; i < selected.Count; i++)
             {
                 PlayerLabels[i].Content = selected[i].PlayerName;
@@ -86,7 +85,10 @@ namespace WizardScorer
             tricksWindow.Show();
             this.Hide();
         }
-
+        public static void Increment_round()
+        {
+            round++;
+        }
         private void Go_To_Points(object sender, RoutedEventArgs e)
         {
             PointsWindow pointsWindow = new();

@@ -12,9 +12,11 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <TextBlock Text="Add meg a jósolt ütéseket!" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="30" Margin="10" VerticalAlignment="Top"/>
-        <Grid x:Name="MainGrid" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2">
+        <TextBlock Text="Add meg a jósolt ütéseket!" HorizontalAlignment="Center" FontSize="30" Margin="10" VerticalAlignment="Top"/>
+        <Label x:Name="Actual_round" Grid.Row="1" HorizontalAlignment="Center" FontSize="30" Margin="10" VerticalAlignment="Top" />
+        <Grid x:Name="MainGrid" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition x:Name="labelColumn" />
                 <ColumnDefinition x:Name="InputColumn"/>
@@ -41,7 +43,7 @@
             <TextBox x:Name="Player5Pred" Grid.Column="1" Grid.Row="4" Width="200" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"></TextBox>
             <TextBox x:Name="Player6Pred" Grid.Column="1" Grid.Row="5" Width="200" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"></TextBox>
         </Grid>
-        <Button x:Name="Start" Grid.Row="2" Width="200" FontSize="14" Padding="20" Margin="20" Click="Register_Predictions" Content="Rögzítés" />
-        <Button x:Name="Check" Grid.Row="3"  Width="200" FontSize="14" Padding="20" Margin="20" Click="Go_To_Points" Content="Pontozólap" />
+        <Button x:Name="Start" Grid.Row="3" Width="200" FontSize="14" Padding="20" Margin="20" Click="Register_Predictions" Content="Rögzítés" />
+        <Button x:Name="Check" Grid.Row="4"  Width="200" FontSize="14" Padding="20" Margin="20" Click="Go_To_Points" Content="Pontozólap" />
     </Grid>
 </Window>

@@ -11,8 +11,9 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <StackPanel x:Name="Toolbar">
-                <Button x:Name="To_predictions" Width="400" Click="To_predictions_Click">Vissza a jóslatokhoz</Button>
+            <StackPanel x:Name="Toolbar" Grid.Row="0" Orientation="Horizontal">
+                <Button x:Name="To_predictions" Width="200" Margin="100,0" HorizontalAlignment="Left" Click="To_predictions_Click">Vissza a jóslatokhoz</Button>
+                <Button x:Name="To_tricks" Width="200" Margin="100,0" HorizontalAlignment="Right" Click="To_tricks_Click">Vissza az ütésekhez</Button>
             </StackPanel>
         </Grid>
         <Grid x:Name="PointsGrid" VerticalAlignment="Center" Margin="10">
@@ -20,6 +21,8 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
+            <Button x:Name="New_round" Width="200" Click="New_round_Click">Gomb</Button>
         </Grid>
+        
     </Grid>
 </Window>
